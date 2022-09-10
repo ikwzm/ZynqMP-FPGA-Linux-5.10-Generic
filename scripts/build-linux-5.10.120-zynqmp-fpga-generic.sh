@@ -124,7 +124,7 @@ make deb-pkg
 cp arch/arm64/boot/Image.gz ../vmlinuz-$KERNEL_RELEASE-$BUILD_VERSION
 cp .config             ../files/config-$KERNEL_RELEASE-$BUILD_VERSION
 
-### Install devicetree to target/UltraZed-EG-IOCC/boot/
+### Install devicetree to this repository
 
 install -d ../devicetrees/$KERNEL_RELEASE-$BUILD_VERSION
 cp arch/arm64/boot/dts/xilinx/*.dtsi ../devicetrees/$KERNEL_RELEASE-$BUILD_VERSION
