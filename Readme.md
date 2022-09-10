@@ -6,11 +6,13 @@ Overview
 
 ### Introduction
 
-This Repository provides a Linux Kernel Image/DeviceTrees/Debian Packages for Zynq MPSoC.
+This Repository provides a Linux Kernel (v5.10) Image/Device Trees/Debian Packages for Zynq MPSoC.
 
   * vmlinuz-5.10.$(SUBLEVEL)-zynqmp-fpga-generic-$(BUILD_VERSION)
   * linux-headers-5.10.$(SUBLEVEL)-zynqmp-fpga-generic_5.10.$(SUBLEVEL)-zynqmp-fpga-generic-$(BUILD_VERSION)_arm64.deb
   * linux-image-5.10.$(SUBLEVEL)-zynqmp-fpga-generic_5.10.$(SUBLEVEL)-zynqmp-fpga-generic-$(BUILD_VERSION)_arm64.deb
+  
+The latest version we are currently releasing is [5.10.120-zynqmp-fpga-generic-2](https://github.com/ikwzm/ZynqMP-FPGA-Linux-5.10-Generic/tree/5.10.120-zynqmp-fpga-generic-2).
 
 **Note: Downloading the entire repository takes time, so download the files from URL**
 
