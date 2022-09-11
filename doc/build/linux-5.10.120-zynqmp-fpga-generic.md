@@ -2,7 +2,7 @@
 
 There are two ways
 
-1. run scripts/build-linux-5.10.120-zynqmp-fpga-generic.sh (easy)
+1. run [scripts/build-linux-5.10.120-zynqmp-fpga-generic.sh](../../scripts/build-linux-5.10.120-zynqmp-fpga-generic.sh) (easy)
 2. run this chapter step-by-step (annoying)
 
 ## Download Linux Kernel Source
@@ -123,6 +123,7 @@ shell$ git add arch/arm64/configs/zynqmp_fpga_generic_defconfig
 shell$ git commit -m "[add] zynqmp_fpga_generic_defconfig to arch/arm64/configs"
 ```
 
+## Build
 
 ### Create tag and .version
 
@@ -130,8 +131,6 @@ shell$ git commit -m "[add] zynqmp_fpga_generic_defconfig to arch/arm64/configs"
 shell$ git tag -a 5.10.120-zynqmp-fpga-generic-2 -m "release 5.10.120-zynqmp-fpga-generic-2"
 shell$ echo 2 > .version
 ```
-
-## Build
 
 ### Setup for Build 
 

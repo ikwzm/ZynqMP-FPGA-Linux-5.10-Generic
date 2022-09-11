@@ -99,13 +99,12 @@ cp ../files/zynqmp_fpga_generic_defconfig arch/arm64/configs/
 git add arch/arm64/configs/zynqmp_fpga_generic_defconfig
 git commit -m "[add] zynqmp_fpga_generic_defconfig to arch/arm64/configs"
 
+## Build
 
 ### Create tag and .version
 
 git tag -a $KERNEL_RELEASE-$BUILD_VERSION -m "release $KERNEL_RELEASE-$BUILD_VERSION"
 echo $BUILD_VERSION > .version
-
-## Build
 
 ### Setup for Build 
 
