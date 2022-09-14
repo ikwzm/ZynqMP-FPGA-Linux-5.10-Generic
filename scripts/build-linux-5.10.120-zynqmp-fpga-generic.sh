@@ -90,7 +90,7 @@ git add --update
 git commit -m "[change] lima_device to be able to specify multiple IRQ names."
 
 patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-drm-xlnx.diff
-git add --update
+git add --all
 git commit -m "[add] Dumb Buffer Alignment Size to Xilinx DRM KMS Driver for Lima support."
 
 ### Add zynqmp_fpga_generic_defconfig
