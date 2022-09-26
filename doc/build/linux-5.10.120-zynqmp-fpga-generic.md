@@ -88,33 +88,6 @@ shell$ git add --all
 shell$ git commit -m "[patch] for Kria KV260."
 ```
 
-### Patch for Lima
-
-```console
-shell$ patch -p1 < ../patchs/linux-5.10.120-zynqmp-fpga-lima-drv.diff
-shell$ git add --update
-shell$ git commit -m "[add] CONFIG_DRM_LIMA_OF_ID_PREFIX to drivers/gpu/drm/lima/Kconfig and lima_drv.c" \
-                  -m "[add] CONFIG_DRM_LIMA_OF_ID_PARAMETERIZE to drivers/gpu/drm/lima/Kconfig and lima_drv.c"
-```
-
-```console
-shell$ patch -p1 < ../patchs/linux-5.10.120-zynqmp-fpga-lima-clk.diff
-shell$ git add --update
-shell$ git commit -m "[change] clk of lima_device to use clk_bulk."
-```
-
-```console
-shell$ patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-lima-irq.diff
-shell$ git add --update
-shell$ git commit -m "[change] lima_device to be able to specify multiple IRQ names."
-```
-
-```console
-shell$ patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-drm-xlnx.diff
-shell$ git add --all
-shell$ git commit -m "[add] Dumb Buffer Alignment Size to Xilinx DRM KMS Driver for Lima support."
-```
-
 ### Add zynqmp_fpga_generic_defconfig
 
 ```console
@@ -128,8 +101,8 @@ shell$ git commit -m "[add] zynqmp_fpga_generic_defconfig to arch/arm64/configs"
 ### Create tag and .version
 
 ```console
-shell$ git tag -a 5.10.120-zynqmp-fpga-generic-2 -m "release 5.10.120-zynqmp-fpga-generic-2"
-shell$ echo 2 > .version
+shell$ git tag -a 5.10.120-zynqmp-fpga-generic-3 -m "release 5.10.120-zynqmp-fpga-generic-3"
+shell$ echo 3 > .version
 ```
 
 ### Setup for Build 
@@ -152,15 +125,15 @@ shell$ make deb-pkg
 ### Install kernel image to this repository
 
 ```console
-shell$ cp arch/arm64/boot/Image.gz ../vmlinuz-5.10.120-zynqmp-fpga-generic-2
-shell$ cp .config ../files/config-5.10.120-zynqmp-fpga-generic-2
+shell$ cp arch/arm64/boot/Image.gz ../vmlinuz-5.10.120-zynqmp-fpga-generic-3
+shell$ cp .config ../files/config-5.10.120-zynqmp-fpga-generic-3
 ```
 
 ### Install devicetree to this repository
 
 ```console
-shell$ install -d ../devicetrees/5.10.120-zynqmp-fpga-generic-2
-shell$ cp arch/arm64/boot/dts/xilinx/*.dtsi ../devicetrees/5.10.120-zynqmp-fpga-generic-2
-shell$ cp arch/arm64/boot/dts/xilinx/*.dts  ../devicetrees/5.10.120-zynqmp-fpga-generic-2
-shell$ cp arch/arm64/boot/dts/xilinx/*.dtb  ../devicetrees/5.10.120-zynqmp-fpga-generic-2
+shell$ install -d ../devicetrees/5.10.120-zynqmp-fpga-generic-3
+shell$ cp arch/arm64/boot/dts/xilinx/*.dtsi ../devicetrees/5.10.120-zynqmp-fpga-generic-3
+shell$ cp arch/arm64/boot/dts/xilinx/*.dts  ../devicetrees/5.10.120-zynqmp-fpga-generic-3
+shell$ cp arch/arm64/boot/dts/xilinx/*.dtb  ../devicetrees/5.10.120-zynqmp-fpga-generic-3
 ```

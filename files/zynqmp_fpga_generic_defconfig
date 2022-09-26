@@ -9849,9 +9849,6 @@ CONFIG_DRM_PANEL_SIMPLE=y
 #### LIMA (DRM support for ARM Mali 400/450 GPU)
 ####
 #### CONFIG_DRM_LIMA is not set
-CONFIG_DRM_LIMA=m
-CONFIG_DRM_LIMA_OF_ID_PREFIX="arm,lima-"
-CONFIG_DRM_LIMA_OF_ID_PARAMETERIZE=y
 
 ####
 #### Panfrost (DRM support for ARM Mali Midgard/Bifrost GPUs)
@@ -9872,11 +9869,6 @@ CONFIG_DRM_ZYNQMP_DPSUB=y
 #### Xilinx DRM KMS Driver
 ####
 CONFIG_DRM_XLNX=y
-
-####
-#### Xilinx DRM Dumb Buffer Alignment Default Size
-####
-CONFIG_DRM_XLNX_DUMB_ALIGNMENT_DEFAULT_SIZE=8
 
 ####
 #### Xilinx DRM KMS bridge

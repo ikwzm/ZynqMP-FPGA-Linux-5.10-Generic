@@ -3,7 +3,7 @@
 CURRENT_DIR=`pwd`
 KERNEL_VERSION=5.10.120
 LOCAL_VERSION=zynqmp-fpga-generic
-BUILD_VERSION=2
+BUILD_VERSION=3
 KERNEL_RELEASE=$KERNEL_VERSION-$LOCAL_VERSION
 LINUX_BUILD_DIR=linux-$KERNEL_RELEASE
 
@@ -73,25 +73,6 @@ git commit -m "[patch] for Ultra96-V2."
 patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-kv260.diff
 git add --all
 git commit -m "[patch] for Kria KV260."
-
-### Patch for Lima
-
-patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-lima-drv.diff
-git add --update
-git commit -m "[add] CONFIG_DRM_LIMA_OF_ID_PREFIX to drivers/gpu/drm/lima/Kconfig and lima_drv.c" \
-           -m "[add] CONFIG_DRM_LIMA_OF_ID_PARAMETERIZE to drivers/gpu/drm/lima/Kconfig and lima_drv.c"
-
-patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-lima-clk.diff
-git add --update
-git commit -m "[change] clk of lima_device to use clk_bulk."
-
-patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-lima-irq.diff
-git add --update
-git commit -m "[change] lima_device to be able to specify multiple IRQ names."
-
-patch -p1 < ../patchs/linux-$KERNEL_VERSION-zynqmp-fpga-drm-xlnx.diff
-git add --all
-git commit -m "[add] Dumb Buffer Alignment Size to Xilinx DRM KMS Driver for Lima support."
 
 ### Add zynqmp_fpga_generic_defconfig
 
