@@ -6,17 +6,13 @@ Overview
 
 ### Introduction
 
-This Repository provides a Linux Kernel (v5.10) Image/Device Trees/Debian Packages for Zynq MPSoC.
+This Repository provides a Linux Kernel (v5.10.120) Image and Device Trees for Zynq MPSoC.
 
-  * vmlinuz-5.10.$(SUBLEVEL)-zynqmp-fpga-generic-$(BUILD_VERSION)
-  * linux-headers-5.10.$(SUBLEVEL)-zynqmp-fpga-generic_5.10.$(SUBLEVEL)-zynqmp-fpga-generic-$(BUILD_VERSION)_arm64.deb
-  * linux-image-5.10.$(SUBLEVEL)-zynqmp-fpga-generic_5.10.$(SUBLEVEL)-zynqmp-fpga-generic-$(BUILD_VERSION)_arm64.deb
-  
-The latest version we are currently releasing is [5.10.120-zynqmp-fpga-generic-2](https://github.com/ikwzm/ZynqMP-FPGA-Linux-5.10-Generic/tree/5.10.120-zynqmp-fpga-generic-2).
+### Note
 
-**Note: Downloading the entire repository takes time, so download the files from URL**
+**The Linux Kernel Image provided in this repository is not official.**
 
-  * https://github.com/ikwzm/ZynqMP-FPGA-Linux-5.10-Generic/releases
+**I modified it to my liking. Please handle with care.**
 
 ### Features
 
@@ -26,5 +22,12 @@ The latest version we are currently releasing is [5.10.120-zynqmp-fpga-generic-2
   * Enable FPGA Bridge
   * Enable FPGA Reagion
   * Enable ATWILC3000 Linux Driver for Ultra96-V2
-  * Enable Lima(Open Source Mali-400 Device Driver)
+
+Release
+------------------------------------------------------------------------------------
+
+| Version  | Local Name          | Build Version | Release |
+|:---------|:--------------------|:--------------|:--------|
+| 5.10.120 | zynqmp-fpga-generic | 3             | [5.10.120-zynqmp-fpga-generic-3](https://github.com/ikwzm/ZynqMP-FPGA-Linux-5.10-Generic/tree/5.10.120-zynqmp-fpga-generic-3) |
+
 
